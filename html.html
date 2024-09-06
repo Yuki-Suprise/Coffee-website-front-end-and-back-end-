@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心动咖啡</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/tools.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+</head>
+
+<body>
+    <form id="login">
+        <div id="loginAlert">
+            <h4><span>登录</span><span id="loginClose">关闭</span></h4>
+            <p>
+                <label> 用户名</label>
+                <input type="text" class="myinp" id="loginUsername" name="username" onmouseover="this.style.border='1px solid #f60'"
+                       onfoucs="this.style.border='1px solid #744522'" onblur="this.style.border='1px solid #ccc'" />
+            </p>
+            <p>
+                <label> 密　码</label>
+                <input type="password" class="myinp" id="loginPassword" name="password" onmouseover="this.style.border='1px solid #f60'"
+                       onfoucs="this.style.border='1px solid #744522'" onblur="this.style.border='1px solid #ccc'" />
+            </p>
+            <p>
+                <input type="button" value="登录" class="sub" onclick="login()" />
+                <input type="reset" value="重置" class="sub" />
+            </p>
+        </div>
+    </form>
+    <form id="reg">
+        <div id="regAlert">
+            <h4><span>注册</span><span id="regClose">关闭</span></h4>
+            <p>
+                <label> 用户名</label>
+                <input type="text" class="myinp" id="regUsername" name="username" onmouseover="this.style.border='1px solid #f60'"
+                       onfoucs="this.style.border='1px solid #f60'" onblur="this.style.border='1px solid #ccc'" />
+            </p>
+            <p>
+                <label> 密　码</label>
+                <input type="password" class="myinp" id="regPassword" name="password" onmouseover="this.style.border='1px solid #f60'"
+                       onfoucs="this.style.border='1px solid #f60'" onblur="this.style.border='1px solid #ccc'" />
+            </p>
+            <p>
+                <label>确认密码</label>
+                <input type="password" class="myinp" id="regCPassword" name="cpassword" onmouseover="this.style.border='1px solid #f60'"
+                       onfoucs="this.style.border='1px solid #f60'" onblur="this.style.border='1px solid #ccc'" />
+            </p>
+            <p>
+                <input type="button" value="注册" class="sub" onclick="reg()" />
+                <input type="reset" value="重置" class="sub" />
+            </p>
+        </div>
+    </form>
+    <div class="fix">
+        <img class="logo" src="./img/logo.png">
+        <div class="logo_right">
+            <div class="l_r_1">
+                Mon-Fri: 8am to 2pm &nbsp;&nbsp;&nbsp;&nbsp; Sat-Sun: 11am to 4pm &nbsp;&nbsp;&nbsp;&nbsp;(012) 6985 236
+                7512
+            </div>
+            <div class="l_r_2"> <a href="#HOME" style="color: white;">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#ABOUT" style="color: white;">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#COFFEE" style="color: white;">COFFEE</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#REVIEW" style="color: white;">REVIEW</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#BLOG" style="color: white;">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#PAGES" style="color: white;">PAGES</a> </div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="topmenu">
+            <!-- nav 整个导航栏 -->
+            <ul class="nav">
+                <!-- 一级菜单 -->
+                <li class="nav-container">
+                    <div class="dit"></div>
+                    <!-- 二级菜单 -->
+                    <ul class="nav-list" style="list-style: none;">
+                        <li> <a href="../../../1214/留言板.html" style="color: white;">contact with us</a> </li>
+                        <li> <a href="  " style="color: white;"></a> </li>
+                        <li> <a href="javascript:signin()" style="color: white;">sign in</a> </li>
+                        <li> <a href="#REVIEW" style="color: white;"></a> </li>
+                        <li> <a href="javascript:signup()" style="color: white;">sign up</a> </li>
+                        <li> <a href="#PAGES" style="color: white;">help</a> </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- nav 整个导航栏结束 -->
+        </div>
+    </div>
+    <div class="Ocurb">
+        <!--最大的空间div-->
+        <div class="cube">
+            <!--正方体的box-->
+            <!--这个是大的正方体的六面-->
+            <div class="out-front"></div>
+            <div class="out-back"></div>
+            <div class="out-left"></div>
+            <div class="out-right"></div>
+            <div class="out-top"></div>
+            <div class="out-bottom"></div>
+        </div>
+    </div>
+    <div class="header" id="HOME">
+        <div class="center">
+            <span class="center_f"><strong>NOW &nbsp;YOU &nbsp;CAN &nbsp;FEEL &nbsp;THE &nbsp;ENERGY</strong></span>
+            <h1 style="margin-top: -100px; font-size: 60px;">
+                Start your day with <br />
+                a delicious Coffee
+            </h1>
+            <div class="center_btn"><a href="javascript:;">BUY NOW</a></div>
+        </div>
+    </div>
+    <div class="second" id="ABOUT">
+
+        <div class="s_left"> <video width="555" height="350" autoplay="autoplay" controls>
+                <source src="coffee.mp4" type="video/mp4"></video> 
+		</div>
+		
+        <div class="s_right">
+            <h6 style="color:#b68834; margin-top:30px;font-size:16px;">Live Coffee making process.</h6>
+            <h1 style="font-size: 36px; margin-top: 10px;">
+                We Telecast our <br />
+                Coffee Making Live
+            </h1>
+            <p style="margin-top: 30px;margin-bottom: 30px;">
+                <strong>
+                    We are here to listen from you deliver
+                    exellence
+                </strong>
+            </p>
+            <p style="color: #777; font-size: 16px;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br />
+                eiusmod temp or incididunt ut labore et dolore magna aliqua. <br />
+                Ut enim ad minim.
+            </p>
+            <p style="margin-top: 20px;"> <img src="./img/signature.png" alt="签名"> </p>
+        </div>
+        <div class="wrap" id="wrap">
+            <ul class="content">
+            </ul>
+            <a href="javascript:;" class="prev">&lt;</a> <a href="javascript:;" class="next">&gt;</a>
+        </div>
+    </div>
+    <div class="third" id="COFFEE">
+        <div class="t_f">
+            <span style="margin:0px 0px 0px 200px; font-size: 40px; font-weight: bold;">
+               What kind of Coffee we serve for
+                you
+            </span>
+            <p style="margin:30px 0 0 350px;font-size: 26px; color: #777;text-align: center;">
+             Maybe you will like them.
+            </p>
+        </div>
+        <div class="t_b">
+            <div style="width: 1300px; margin-left: 250px;">
+                <div>
+                    <div class="t_b_box">
+                        <div style="width: 300px; height: 42px; margin: 30px 10px 30px 30px;">
+                            <p style="height: 50px;">
+                                <span style="display: block; float: left; color: #222222; font-size: 20px; font-weight: bold;">Coffee blend ice cream</span> <span style="display: block; float: right; color: #b68834; font-size: 22px;font-weight: bold;">¥ 45</span>
+                            </p>
+                            <span style="color: #777; font-size: 18px;">Cold extract coffee, vanilla ice cream imported from New Zealand.</span>
+                        </div>
+                    </div>
+                    <div class="t_b_box">
+                        <div style="width: 300px; height: 42px; margin: 30px 10px 30px 30px;">
+                            <p style="height: 50px;">
+                                <span style="display: block; float: left; color: #222222; font-size: 20px; font-weight: bold;">Cold extract coffee series</span> <span style="display: block; float: right; color: #b68834; font-size: 22px;font-weight: bold;">¥ 39</span>
+                            </p>
+                            <span style="color: #777; font-size: 18px;">Use cold filtered water to extract slowly in the special equipment for cold extraction.</span>
+                        </div>
+                    </div>
+                    <div class="t_b_box">
+                        <div style="width: 300px; height: 42px; margin: 30px 10px 30px 30px;">
+                            <p style="height: 50px;">
+                                <span style="display: block; float: left; color: #222222; font-size: 20px; font-weight: bold;">Hand made Espresso</span> <span style="display: block; float: right; color: #b68834; font-size: 22px;font-weight: bold;">¥ 27</span>
+                            </p>
+                            <span style="color: #777; font-size: 18px;">USimple is delicious, extracted from classic espresso, mixed with water, full-bodied and overflowing aroma.</span>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <div>
+                    <div class="t_b_box">
+                        <div style="width: 300px; height: 42px; margin: 30px 10px 30px 30px;">
+                            <p style="height: 50px;">
+                                <span style="display: block; float: left; color: #222222; font-size: 20px; font-weight: bold;">Frappuccino</span> <span style="display: block; float: right; color: #b68834; font-size: 22px;font-weight: bold;">¥ 32</span>
+                            </p>
+                            <span style="color: #777; font-size: 18px;">Bloom happiness in milk and ice, accompanied by snow-white cream, make you full of vitality every moment.</span>
+                        </div>
+                    </div>
+                    <div class="t_b_box">
+                        <div style="width: 300px; height: 42px; margin: 30px 10px 30px 30px;">
+                            <p style="height: 50px;">
+                                <span style="display: block; float: left; color: #222222; font-size: 20px; font-weight: bold;">Chawana</span> <span style="display: block; float: right; color: #b68834; font-size: 22px;font-weight: bold;">¥ 25</span>
+                            </p>
+                            <span style="color: #777; font-size: 18px;">Lock the tea aroma with soft milk foam and add classic flavor sauce. </span>
+                        </div>
+                    </div>
+                    <div class="t_b_box">
+                        <div style="width: 300px; height: 42px; margin: 30px 10px 30px 30px;">
+                            <p style="height: 50px;">
+                                <span style="display: block; float: left; color: #222222; font-size: 20px; font-weight: bold;">Classic chocolate drink</span> <span style="display: block; float: right; color: #b68834; font-size: 22px;font-weight: bold;">¥ 25</span>
+                            </p>
+                            <span style="color: #777; font-size: 18px;">Can't resist the strong cocoa aroma of chocolate sauce in steamed milk.</span>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <div>
+                    <div class="t_b_box">
+                        <div style="width: 300px; height: 42px; margin: 30px 10px 30px 30px;">
+                            <p style="height: 50px;">
+                                <span style="display: block; float: left; color: #222222; font-size: 20px; font-weight: bold;">Play ice tune</span> <span style="display: block; float: right; color: #b68834; font-size: 22px;font-weight: bold;">¥ 35</span>
+                            </p>
+                            <span style="color: #777; font-size: 18px;">UInspired by golden soup power, refreshing lemon flavor is rubbed and concentrated.</span>
+                        </div>
+                    </div>
+                    <div class="t_b_box">
+                        <div style="width: 300px; height: 42px; margin: 30px 10px 30px 30px;">
+                            <p style="height: 50px;">
+                                <span style="display: block; float: left; color: #222222; font-size: 20px; font-weight: bold;">Air cooled coffee extract</span> <span style="display: block; float: right; color: #b68834; font-size: 22px;font-weight: bold;">¥ 48</span>
+                            </p>
+                            <span style="color: #777; font-size: 18px;">Cold extraction of coffee with low temperature extraction and more compact foam.</span>
+                        </div>
+                    </div>
+                    <div class="t_b_box">
+                        <div style="width: 300px; height: 42px; margin: 30px 10px 30px 30px;">
+                            <p style="height: 50px;">
+                                <span style="display: block; float: left; color: #222222; font-size: 20px; font-weight: bold;">Coffee bean</span> <span style="display: block; float: right; color: #b68834; font-size: 22px;font-weight: bold;">¥ 75</span>
+                            </p>
+                            <span style="color: #777; font-size: 18px;">With a nutty and cocoa like aroma, it is made of high-quality Latin American coffee beans.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fourth" id="REVIEW">
+		
+        <div class="" style="width: 1300px;height: 800px;margin: 80px 0 0 200px;">
+			<h1 style="text-align: center;">I wish you all the best</h1>
+			<br>
+            <div style="width: 350px; height: 100%; float: left;"> <img class="img" src="./img/g1.jpg" style="width: 350px; height: 270px;"> <img class="img" src="./img/g2.jpg" style="width: 350px; height: 408px; margin-top: 30px;"> </div>
+            <div style="width: 950px; height: 100%; float: left;"> <img class="img" src="./img/g3.jpg" style="width: 720px; height: 408px;margin-left: 30px;"> <img class="img" src="./img/g4.jpg" style="width: 350px; height: 270px;margin: 30px 15px 0 30px;"> <img class="img" src="./img/g5.jpg" style="width: 350px; height: 270px;"> </div>
+            <span style="color: #777; font-size: 18px;">Wake up in the morning, with foreign coffee beans into a carefully mixed life, either thick or light, sweet or bitter. <br><br>
+			The pursuit of quality of life is always like this cup of coffee in your hand, returning to your true self, delicate and flexible. <br><br>
+			Borrow some clean sunshine to make my heart beat. <br><br>
+			Can you smile sweetly? I forgot sugar in my coffee. <br><br>
+			A drop of sweet smell is at the entrance, but there are all kinds of things in the world.  <br><br>
+			The light aftertaste is not as good as Huanglian, and there is no honey sweetness. The taste of each is infinite.
+			</span>
+        </div>
+    </div>
+    <div class="fivth" id="BLOG">
+        <h1 style="text-align:center;padding-top:100px;">HERE ARE MY BLOG</h1>
+        <p style="text-align:center;line-height: 50px;">The meaning of life is to move forward.</p>
+        <div class="f_left">
+            <img src="./img/r1.png" />
+            <h4 style="margin-top: 20px;font-size: 22px;">Origin of coffee</h4>
+            <p style="font-size: 16px;line-height:20px;margin-top: 20px;font-weight:lighter;">
+            The skin of coffee fruit is very thick and tastes slightly bitter. <br>The core under the peel is sweet, and its texture is similar to that of grapes. <br>The inner layer of the kernel is a protective film for the seed. <br>This film is much like the protective film of apple seeds.  <br>Remove this film and you'll see green coffee beans - usually two. After washing the coffee beans, you can bake them.
+            </p>
+        </div>
+        <div class="f_right">
+            <img src="./img/r2.png" />
+            <h4 style="margin-top: 20px;font-size: 22px;">Coffee baking</h4>
+            <p style="font-size: 16px;line-height:20px;margin-top: 20px;font-weight:lighter;">
+                After baking in a container for 10 to 11 minutes, the coffee beans become darker and darker, and oil begins to emerge on the surface. At this baking stage (usually 11 or 15 minutes depending on the type of coffee), the strong flavor of the coffee beans begins to be fully released and perfectly integrated with the special taste of the coffee beans themselves.
+            </p>
+        </div>
+        <div class="f_num" style="display: flex; justify-content: space-evenly;align-items: center;">
+            <div style="height:200px ;width: 200px; margin-right: 20px;text-align: center;">
+                <span id="num1" style="font-size: 60px;">0</span>
+                <p style="margin-top: 10px;font-size: 16px;">Happy Client</p>
+            </div>
+            <div style="height:200px ;width: 200px; margin-right: 20px;text-align: center">
+                <span id="num2" style="font-size: 60px;">0</span>
+                <p style="margin-top: 10px;font-size: 16px;">Total Projects</p>
+            </div>
+            <div style="height:200px ;width: 200px; margin-right: 20px;text-align: center">
+                <span id="num3" style="font-size: 60px;">0</span>
+                <p style="margin-top: 10px;font-size: 16px;">Cups Coffee</p>
+            </div>
+            <div style="height:200px ;width: 200px; margin-right: 20px;text-align: center">
+                <span id="num4" style="font-size: 60px;">0</span>
+                <p style="margin-top: 10px;font-size: 16px;">Total Submitted</p>
+            </div>
+        </div>
+    </div>
+    <div class="six" id="PAGES">
+		<h1 style="font-size: 36px; margin-top: 50px;text-align: center;"> I am listenning for you </h1>
+        <h3 style="text-align: center; margin-top: 30px;">What kind of coffee we can give you</h3>
+        <p style="font-size: 18px; text-align: center; color: #777; margin-top: 20px;">
+            Milk coffee? Black coffee?
+        </p>
+        <div style="margin: 40px;">
+            <div class="six_left">
+				<div class="col-md-4 col-sm-6">
+				<div class="box">
+					<img src="images/9.jpeg">
+					<div class="box-content">
+						<h3 class="title">Milk Coffee</h3>
+						<span class="post">sweet taste</span>
+					</div>
+				</div>
+			</div>
+                <div style="display: block; height: 40px;">
+                    <div class="btn2"><a href="javascript:;">Travl</a></div>
+                    <div class="btn2"><a href="javascript:;">Life style</a></div>
+                </div>
+                <h4 style="font-size: 18px; line-height: 50px;">I think you must be as warm as milk coffee</h4>
+                <p style="color: #777;font-size: 16px;">
+                    Classic coffee of natural color. Slowly pour the boiled milk into the freshly extracted espresso and cover it with soft milk foam. It is simple, fragrant and pure.
+                </p>
+                <p style="font-size: 18px;line-height: 50px;font-weight: bold;">31st January, 2021</p>
+            </div>
+            <div class="six_right">
+                				<div class="col-md-4 col-sm-6">
+				<div class="box">
+					<img src="images/8.jpeg">
+					<div class="box-content">
+						<h3 class="title">Black Coffee</h3>
+						<span class="post">bitterness</span>
+					</div>
+				</div>
+			</div>
+                <div style="display: block; height: 40px;">
+                    <div class="btn2"><a href="javascript:;">Travl</a></div>
+                    <div class="btn2"><a href="javascript:;">Life style</a></div>
+                </div>
+                <h4 style="font-size: 18px; line-height: 50px;">I think you must be as mature as black coffee</h4>
+                <p style="color: #777;font-size: 16px;">
+                    American coffee is light and clear, almost transparent, and you can even see the brown coffee at the bottom of the cup. Simple is delicious, extracted from classic espresso, mixed with water, full-bodied and overflowing aroma.
+                </p>
+                <p style="font-size: 18px;line-height: 50px;font-weight: bold;">31st January, 2021</p>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="footer">
+        <div class="foot_center">
+            <div style="height: 150px;width: 445px; color: white; margin-left: 300px;float: left;">
+                <h4 style="margin:0 20px 30px 0; font-size: 22px;">About Us</h4>
+                <p style="margin:0 0 30px 0;font-size: 16px;font-weight: lighter;">
+                   I hope you can love yourself in your busy life. 	<br>
+					Don't sleep too late, the dream will be too short.
+                </p>
+                <p style="font-size: 16px;font-weight: lighter;">Copyright © 2021.HuangYuning name All rights reserved.</p>
+            </div>
+            <div style="height: 150px;width: 445px; color: white;float: left;margin-left: 100px;">
+                <h4 style="margin:0 20px 30px 0; font-size: 22px;">Newsletter</h4>
+                <p style="margin:0 0 30px 0;font-size: 16px;font-weight: lighter;">Stay update with our latest</p>
+                <input type="" name="" id="" placeholder="Email" style="width: 365px;height: 41px;font-size: 16px;" />
+            </div>
+        </div>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>

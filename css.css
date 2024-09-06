@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* HOME界面 */
+.header {
+    position: relative;
+    /* 将header设置为弹性盒子(一种居中方法) */
+    display: flex;
+    /* 给子元素设置为行居中 */
+    justify-content: center;
+    /* 给子元素设置为列居中 */
+    align-items: center;
+    /* 引入图片 */
+    background-image: url(./img/1.jpg);
+    /* 字体颜色 */
+    color: white;
+    /* 设置宽度和高度 */
+    height: 711px;
+    width: 100%;
+}
+
+.fix {
+    /* 固定定位 ,脱离文档流*/
+    position: fixed;
+    top: 0px;
+    background-color: transparent;/* 背景透明 */
+    width: 100%;
+    height: 80px;
+    color: white;
+    /* 脱离文档流后，显示层级在没脱离文档流的上一层 */
+    z-index: 1;
+}
+
+.logo {
+    margin-top: 30px;
+    margin-left: 200px;
+}
+
+.logo_right {
+    position: relative;
+    margin-left: 500px;
+    margin-top: -65px;
+    height: 100%;
+    color: white;
+}
+
+.l_r_1 {
+    position: absolute;
+    right: 200px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.l_r_2 {
+    position: absolute;
+    right: 200px;
+    top: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.center {
+    height: 100%;
+    width: 1000px;
+    margin-left: 100px;
+}
+
+.center_f {
+    font-size: 16px;
+    line-height: 300px;
+}
+
+.center_btn {
+    text-align: center;
+    margin-top: 20px;
+    height: 38px;
+    width: 148px;
+    line-height: 38px;
+    border-radius: 50px;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.center_btn:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.center_btn:hover a {
+    color: white;
+}
+
+/* ABOUT页面 */
+.second {
+    margin-top: 100px;
+    height: 927px;
+    width: 100%;
+}
+
+.s_left {
+    margin-left: 200px;
+    display: block;
+    float: left;
+    width: 570px;
+    height: 100%;
+}
+
+.s_right {
+    padding-left: 50px;
+    display: block;
+    float: left;
+    width: 570px;
+    height: 100%;
+}
+/* COOFEE页面 */
+.third {
+    height: 927px;
+    width: 100%;
+    background-image: url(./img/menu-bg.jpg);
+}
+
+.t_f {
+    /* 让子元素居中 */
+    margin: 0 auto;
+    padding-top: 200px;
+    width: 950px;
+    height: 152px;
+}
+
+.t_b {
+    width: 100%;
+    height: 1100px;
+}
+
+.t_b_box {
+    float: left;
+    width: 350px;
+    height: 150px;
+    color: #777;
+    border-radius: 15px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 10px 30px 0px rgba(182, 136, 52, 0.2);
+    background-color: white;
+}
+
+.fourth {
+    height: 1132px;
+    width: 100%;
+}
+/* BLOG界面 */
+.fivth {
+    height: 800px;
+    height: 700px;
+    background-color: #b68834;
+    color: white;
+}
+
+.f_left {
+    margin-left: 300px;
+    width: 570px;
+    height: 187px;
+    float: left;
+}
+
+.f_right {
+    width: 570px;
+    height: 187px;
+    float: left;
+}
+
+.f_num {
+    margin-top: 200px;
+    height: 300px;
+    width: 100%;
+}
+
+.six {
+    height: 900px;
+    width: 100%;
+}
+
+.six_left {
+    margin-left: 200px;
+    margin-right: 40px;
+    float: left;
+    width: 540px;
+    height: 500px;
+}
+
+.six_right {
+    float: left;
+    width: 540px;
+    height: 500px;
+}
+
+.btn2 {
+    height: 32px;
+    width: 80px;
+    float: left;
+    margin-right: 5px;
+    border: 1px solid #eee;
+    text-align: center;
+    border-radius: 20px;
+    line-height: 32px;
+}
+
+.btn2:hover {
+    background-color: #b68834;
+    transition: all 0.8s ease 0s;/*背景颜色逐渐变色*/
+}
+
+.footer {
+    background-image: url(./img/footer-bg.jpg);
+    height: 506px;
+    width: 100%;
+}
+
+.foot_center {
+    width: 100%;
+    padding-top: 150px;
+    height: 300px;
+}
+
+.nav {
+    list-style: none;
+}
+
+.nav .nav-container {
+    float: left;
+    width: 200px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    /*用line-height撑起隐藏元素*/
+}
+
+.nav .nav-container .nav-list {
+    display: none;
+}
+
+.nav .nav-container:hover .nav-list {
+    background-color: rgb(83, 83, 83, 0.5);
+    display: block;
+}
+
+.menu {
+    position: fixed;
+    top: 80px;
+    left: 0px;
+    z-index: 2;
+}
+
+.dit {
+    border: 15px solid #b5b5b5;
+    border-radius: 50%;
+    height: 0px;
+    width: 0px;
+}
+
+.fly{
+    position: relative;
+    z-index: 2;
+}

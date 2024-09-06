@@ -1,0 +1,287 @@
+/*简单清除默认样式*/
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+
+@keyframes move{
+    0%{
+        transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg) ;
+    }
+    100%{
+        transform:rotateX(720deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+
+div.Ocurb{
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    margin-right: 100px;
+    margin-top: 200px;    /*上外边距设置*/
+    width: 200px;         /*给他一个宽度*/
+    perspective: 1000px;  /*景深设置，视图距元素的距离  相当于摄像机*/
+}
+
+.Ocurb>div.cube{
+    width: 20px;                                               /*box设置宽度200像素*/
+    height: 20px;                                              /*设置高度200像素*/
+    position: relative;                                         /*开启相对定位，好让里面的元素开启定位时不会高度塌陷*/
+    transform-style: preserve-3d ;                              /*开启这个，表示所有元素在3D平面呈现*/
+    transform: rotateX(-50deg) rotateY(-50deg) rotateZ(0deg);   /*一开始的角度，视觉上看一下*/
+    animation: move 8s infinite linear;                         /*启动动画的名字、时长、无限循环、匀速播放*/
+}
+
+/*正方体的设置*/
+.cube>div{
+    width: 100%;                              /*设置的宽度和父级一样*/
+    height: 100%;                             /*设置的高度一样*/
+    border: 10px solid #744522;               /*边框设置*/
+    border-radius: 20px;                      /*设置一下圆角*/
+    position: absolute;                       /*开启绝对定位，这样就全部叠在一起了*/
+/*    background-color: rgba(51,51,51,.3)      来个背景色，30%的透明度*/
+    transition:transform 0.3s ease-in;        /*过度变形的时间设置和快慢设置*/
+}
+
+/*设置正方体的六个面的位置*/
+.cube div.out-front{
+    transform: translateZ(100px);                   /*设置前面的那一面的Z轴往前移*/
+}
+.cube div.out-back{
+    transform: translateZ(-100px) rotateY(180deg);  /*设置后面的那一面的Z轴往后移，Y轴转一下。使得的背面的那一面是面向背面的*/
+}
+.cube div.out-left{
+    transform: translateX(-100px) rotateY(-90deg);  /*设置左边的那一面在X轴上退一些，向左转*/
+}
+.cube div.out-right{
+    transform: translateX(100px) rotateY(90deg);    /*设置右边的那一面在X轴上进一些，向右转*/
+}
+.cube div.out-top{
+    transform: translateY(-100px) rotateX(90deg);   /*设置上边的那一面在Y轴上去一些，向后翻转*/
+}
+.cube div.out-bottom{
+    transform: translateY(100px) rotateX(-90deg);   /*设置下边的那一面在X轴下去一些，向前翻*/
+}
+
+
+/*轮播图*/
+body,ul {
+	padding: 0;
+	margin: 0;
+	
+}
+ul {
+	list-style: none;
+}
+.wrap {
+	position: relative;
+	width: 1200px;
+	height: 360px;
+    margin: 100px auto;
+    padding-top: 450px;
+}
+.content {
+	position: absolute;
+	width: 1200px;
+	height: 360px;
+}
+.content li{
+	position: absolute;
+	background-size: 100% 100%;
+	cursor: pointer;/*鼠标放到上面的时候显示为手*/
+}
+.wrap a {
+	position: absolute;
+	display: none;
+	z-index: 2;
+	top: 80%;
+	width: 60px;
+	height: 60px;
+	margin-top: -30px;
+	font: 36px/60px "宋体";
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	background: #060606;
+	transition: background 1s ease;/*按钮的背景颜色过渡显示*/
+}
+.wrap a:hover {
+	background: #8D7171;
+}
+.prev {
+	left: 30px;
+}
+.next {
+	right: 30px;
+}
+
+/*登录注册*/
+#loginAlert {
+    border: 1px solid #8D7171;
+    width: 300px;
+    height: 150px;
+    background: #e2ecf5;
+    z-index: 1000;
+    position: absolute;
+    display: none;
+}
+
+#loginAlert h4 {
+    height: 20px;
+    background: #8D7171;
+    color: #fff;
+    padding: 5px 0 0 5px;
+}
+
+#loginAlert h4 span {
+    float: left;
+}
+
+#loginAlert h4 span#loginClose {
+    margin-left: 230px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#loginAlert p {
+    padding: 12px 0 0 30px;
+}
+
+#loginAlert p input {
+    width: 120px;
+    margin-left: 20px;
+}
+
+#loginAlert p input.myinp {
+    border: 1px solid #ccc;
+    height: 16px;
+}
+
+#loginAlert p input.sub {
+    width: 60px;
+    margin-left: 30px;
+}
+
+#regAlert {
+    border: 1px solid #8D7171;
+    width: 300px;
+    height: 170px;
+    background: #e2ecf5;
+    z-index: 1000;
+    position: absolute;
+    display: none;
+}
+
+#regAlert h4 {
+    height: 20px;
+    background: #8D7171;
+    color: #fff;
+    padding: 5px 0 0 5px;
+}
+
+#regAlert h4 span {
+    float: left;
+}
+
+#regAlert h4 span#regClose {
+    margin-left: 230px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#regAlert p {
+    padding: 12px 0 0 30px;
+}
+
+#regAlert p input {
+    width: 120px;
+    margin-left: 20px;
+}
+
+#regAlert p input.myinp {
+    border: 1px solid #ccc;
+    height: 16px;
+}
+
+#regAlert p input.sub {
+    width: 60px;
+    margin-left: 30px;
+}
+
+/*遮罩层*/
+.box{
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+}
+/*遮罩层：当鼠标悬停的时候设置一个background，设置z=1，放到上面去*/
+.box:before{
+	content: "";
+	width: 150%;
+	height: 150%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: radial-gradient(rgba(255,255,255,0.1) 15%, transparent 15%) 0 0,
+				radial-gradient(rgba(255,255,255,0.1) 15%, transparent 15%) 16px 16px,
+				radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+				radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 16px 17px;
+	background-size: 32px 32px;
+	background-color: rgba(0,0,0,0.5);
+	opacity: 0;
+	z-index: 1;
+	transform: translate(-50%, -50%) scale(0);
+	transition: all 0.56s ease 0s;
+}
+.box:hover:before{
+	opacity: 1;
+	transform: translate(-50%, -50%) scale(1);
+	/* translate(-50%,-50%) 作用是，往上（x轴）,左（y轴）移动自身长宽的 50%，以使其居于中心位置。*/
+}
+.box img{
+	width: 100%;
+	height: auto;
+	transition: all 0.3s ease 0s;
+}
+.box:hover img{ transform: scale(1.3); }
+.box .box-content{
+	width: 100%;
+	position: absolute;
+	bottom: 5px;
+	left: 0;
+	z-index: 1;
+	transition: all 0.3s ease 0s;
+}
+.box .title{
+	font-size: 22px;
+	font-weight: 600;
+	color: #47ddc8;
+	text-transform: uppercase;
+	text-shadow: 0 0 2px #000;
+	opacity: 0;
+	margin: 0 0 5px 0;
+	position: relative;
+	transform: translateY(100%);
+	transition: all 0.5s ease 0s;
+}
+.box:hover .title{
+	opacity: 1;
+	transform: translateY(0);
+}
+.box .post{
+	display: block;
+	font-size: 14px;
+	font-style: italic;
+	color: #fff;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+	transform: translateX(-100%) rotateX(90deg);
+	transition: all 0.5s ease 0s;
+}
+.box:hover .post{ transform: translateY(0) rotate(0); }/*往x轴方向出现*/
+
+@media only screen and (max-width:990px){
+	.box{ margin-bottom: 30px; }
+}
